@@ -25,7 +25,7 @@ body{
 #title-link{
 	color: #e6e6e6;
 	font-size: 5em;
-	font-family: graystroke;
+	font-family: graystroke, 微软雅黑;
 	font-variant:small-caps;
 	font-weight:bold;
 	text-decoration:none;
@@ -72,7 +72,7 @@ body{
 	float: left;
 	padding: 10px;
 	font-size: 1.5em;
-	font-family: graystroke; !important;
+	font-family: graystroke, 微软雅黑;
 }
 
 #journal-list, #homework-list{
