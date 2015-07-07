@@ -33,31 +33,6 @@ body{
 	padding-top:30px;
 }
 
-ul.menu{
-	list-style-type:none;
-	margin:0;
-	padding:0;
-	padding-top:6px;
-	padding-bottom:6px;
-}
-
-li.menu-item{
-	display:inline;
-}
-
-a.menu-link:link, a.menu-link:visited{
-	font-weight:bold;
-	color:#FFFFFF;
-	background-color:#98bf21;
-	text-align:center;
-	padding:6px;
-	text-decoration:none;
-	text-transform:uppercase;
-}
-a.menu-link:hover, a.menu-link:active{
-	background-color:#7A991A;
-}
-
 #profile{
 	width: 35%;
 	height: auto;
@@ -97,7 +72,7 @@ a.menu-link:hover, a.menu-link:active{
 	float: left;
 	padding: 10px;
 	font-size: 1.5em;
-	font-family: graystroke;
+	font-family: graystroke; !important;
 }
 
 #journal-list, #homework-list{
