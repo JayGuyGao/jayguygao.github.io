@@ -1,6 +1,6 @@
 @font-face{
 	font-family: 'myFont';
-	src: url('AlexBrush-Regular-OTF.otf');
+	src: url('manteka.otf');
 }
 
 body{
@@ -21,7 +21,7 @@ body{
 #title-link{
 	color: #e6e6e6;
 	font-size: 2em;
-	font-family: "Arial";
+	font-family: myFont;
 	font-weight:bold;
 	text-decoration:none;
 	text-align:center;
