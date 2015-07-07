@@ -34,9 +34,18 @@ a.menulink:hover, a.menulink:active{
 	background-color:#7A991A;
 }
 
-#journal{
+#journaltitle{
+	width: 20%;
+	height: auto;
+	border: none;
+	font-weight:bold;
+	float: left;
+}
+
+#journallist{
 	width: 50%;
 	height: auto;
 	border:2px solid black;
 	border-radius:25px;
+	float: left;
 }
