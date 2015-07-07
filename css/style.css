@@ -12,7 +12,7 @@ body{
 	text-align: center;
 }
 
-#titlelink{
+#title-link{
 	color: #e6e6e6;
 	font-size: 2em;
 	font-family: "Arial";
@@ -30,11 +30,11 @@ ul.menu{
 	padding-bottom:6px;
 }
 
-li.menuitem{
+li.menu-item{
 	display:inline;
 }
 
-a.menulink:link, a.menulink:visited{
+a.menu-link:link, a.menu-link:visited{
 	font-weight:bold;
 	color:#FFFFFF;
 	background-color:#98bf21;
@@ -43,7 +43,7 @@ a.menulink:link, a.menulink:visited{
 	text-decoration:none;
 	text-transform:uppercase;
 }
-a.menulink:hover, a.menulink:active{
+a.menu-link:hover, a.menu-link:active{
 	background-color:#7A991A;
 }
 
@@ -55,11 +55,20 @@ a.menulink:hover, a.menulink:active{
 	border-radius:25px;
 }
 
+.profile-content{
+	padding:10px;
+}
+
+#portrait{
+	padding: 10px;
+	float: right;
+}
+
 #homework{
 	clear: left;
 }
 
-#journaltitle, #homeworktitle{
+#journal-title, #homework-title{
 	width: 10%;
 	height: auto;
 	border: none;
@@ -67,7 +76,7 @@ a.menulink:hover, a.menulink:active{
 	float: left;
 }
 
-#journallist, #homeworklist{
+#journal-list, #homework-list{
 	width: 50%;
 	height: auto;
 	border:2px solid black;
