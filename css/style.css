@@ -1,9 +1,11 @@
 #titlelink{
 	font-weight:bold;
+	width: 100%;
 	color:#FFFFFF;
 	background-color:#000000;
 	text-align:center;
 	padding:6px;
+	margin: 1px;
 	text-decoration:none;
 }
 
