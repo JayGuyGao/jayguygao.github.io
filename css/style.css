@@ -33,3 +33,10 @@ a.menulink:link, a.menulink:visited{
 a.menulink:hover, a.menulink:active{
 	background-color:#7A991A;
 }
+
+#journal{
+	width: 50%;
+	height: auto;
+	border:2px solid black;
+	border-radius:25px;
+}
