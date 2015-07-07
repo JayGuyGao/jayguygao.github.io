@@ -76,7 +76,7 @@ body{
 }
 
 #journal-list, #homework-list{
-	width: 42%;
+	width: 45%;
 	height: auto;
 	border:2px solid #333333;
 	border-radius:25px;
