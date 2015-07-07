@@ -34,6 +34,14 @@ a.menulink:hover, a.menulink:active{
 	background-color:#7A991A;
 }
 
+#profile{
+	width: 30%;
+	height: auto;
+	float: left;
+	border:2px solid black;
+	border-radius:25px;
+}
+
 #homework{
 	clear: left;
 }
