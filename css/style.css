@@ -1,6 +1,11 @@
 @font-face{
-	font-family: 'myFont';
-	src: url('manteka.ttf');
+	font-family: 'graystroke';
+	src: url('graystroke regular.otf');
+}
+
+@font-face{
+	font-family: 'corbert';
+	src: url('corbert_regular_regular.otf');
 }
 
 body{
@@ -13,15 +18,15 @@ body{
 	clear:both;
 	background: #333333;
 	width: 100%;
-	height: 50px;
+	height: auto;
 	text-align: center;
-	font-family: myFont;
 }
 
 #title-link{
 	color: #e6e6e6;
-	font-size: 2em;
-	font-family: myFont;
+	font-size: 3em;
+	font-family: graystroke;
+	font-variant:small-caps;
 	font-weight:bold;
 	text-decoration:none;
 	text-align:center;
@@ -66,7 +71,8 @@ a.menu-link:hover, a.menu-link:active{
 }
 
 .profile-content{
-	padding:10px;
+	padding:15px;
+	font-family: 微软雅黑;
 }
 
 #portrait{
@@ -85,9 +91,8 @@ a.menu-link:hover, a.menu-link:active{
 	font-weight:bold;
 	float: left;
 	padding: 10px;
-	font-variant:small-caps;
-	font-size: 2em;
-	font-family: 微软雅黑;
+	font-size: auto;
+	font-family: graystroke;
 }
 
 #journal-list, #homework-list{
@@ -96,6 +101,7 @@ a.menu-link:hover, a.menu-link:active{
 	border:2px solid #333333;
 	border-radius:25px;
 	float: left;
+	font-family: corbert;
 }
 
 #footer{
@@ -111,4 +117,5 @@ a.menu-link:hover, a.menu-link:active{
 	padding-top: 30px;
 	color: #e6e6e6;
 	font-size: 10px;
-	font-family: "Arial";
+	font-family: Arial;
+}
