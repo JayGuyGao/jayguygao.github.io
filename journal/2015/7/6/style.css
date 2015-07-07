@@ -114,6 +114,21 @@ a.menu-link:hover, a.menu-link:active{
 	line-height: 2em;
 }
 
+#go-back{
+	width:90%;
+	height: auto;
+	border: none;
+	font-weight:bold;
+	float: left;
+	padding: 10px;
+	font-size: 1em;
+	font-family: graystroke, 'Microsoft YaHei';
+	margin-top: 20px;
+	clear: left;
+	text-align: right;
+	color: #333333;
+}
+
 .journal-link:link, .journal-link:visited, .homework-link:link, .homework-link:visited{
 	text-decoration:none;
 	color: #000000;
