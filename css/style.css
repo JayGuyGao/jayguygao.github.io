@@ -1,6 +1,6 @@
 @font-face{
-	font-family: manteka;
-	src: url('manteka.ttf');
+	font-family: 'myFont';
+	src: url('AlexBrush-Regular-OTF.otf');
 }
 
 body{
@@ -15,7 +15,7 @@ body{
 	width: 100%;
 	height: 50px;
 	text-align: center;
-	font-family: manteka;
+	font-family: myFont;
 }
 
 #title-link{
@@ -87,7 +87,7 @@ a.menu-link:hover, a.menu-link:active{
 	padding: 10px;
 	font-variant:small-caps;
 	font-size: 2em;
-	font-family: manteka;
+	font-family: 微软雅黑;
 }
 
 #journal-list, #homework-list{
