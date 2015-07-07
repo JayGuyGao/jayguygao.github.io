@@ -1,3 +1,8 @@
+@font-face{
+	font-family: manteka;
+	src: url('/font/manteka.ttf');
+}
+
 body{
 	background-color: #e6e6e6;
 	margin: 0px 0px;
@@ -6,10 +11,11 @@ body{
 
 #title{
 	clear:both;
-	background: #393939;
+	background: #333333;
 	width: 100%;
 	height: 50px;
 	text-align: center;
+	font-family: manteka;
 }
 
 #title-link{
@@ -51,8 +57,12 @@ a.menu-link:hover, a.menu-link:active{
 	width: 30%;
 	height: auto;
 	float: right;
-	border:2px solid black;
+	border:2px solid #333333;
 	border-radius:25px;
+}
+
+#profile:hover, #journal-list:hover, #homework-list:hover{
+	background-color: #CCCCCC;
 }
 
 .profile-content{
@@ -74,12 +84,15 @@ a.menu-link:hover, a.menu-link:active{
 	border: none;
 	font-weight:bold;
 	float: left;
+	padding: 10px;
+	font-variant:small-caps;
+	font-size: 2em;
 }
 
 #journal-list, #homework-list{
 	width: 50%;
 	height: auto;
-	border:2px solid black;
+	border:2px solid #333333;
 	border-radius:25px;
 	float: left;
 }
@@ -87,7 +100,7 @@ a.menu-link:hover, a.menu-link:active{
 #footer{
 	clear:both;
 	margin-top: 60px;
-	background: #393939;
+	background: #333333;
 	width: 100%;
 	height: 70px;
 	text-align: center;
