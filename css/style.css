@@ -1,3 +1,12 @@
+#titlelink{
+	font-weight:bold;
+	color:#FFFFFF;
+	background-color:#000000;
+	text-align:center;
+	padding:6px;
+	text-decoration:none;
+}
+
 ul.menu{
 	list-style-type:none;
 	margin:0;
