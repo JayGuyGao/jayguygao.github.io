@@ -89,24 +89,28 @@ a.menu-link:hover, a.menu-link:active{
 	clear: left;
 }
 
-#journal-title, #homework-title{
-	width: 10%;
+#journal-title{
+	width: auto;
 	height: auto;
 	border: none;
 	font-weight:bold;
 	float: left;
 	padding: 10px;
 	font-size: 1.5em;
-	font-family: graystroke;
+	font-family: graystroke, 'Microsoft YaHei';
+	margin-top: 20px;
 }
 
-#journal-list, #homework-list{
+#journal-content{
 	width: 45%;
 	height: auto;
 	border:2px solid #333333;
 	border-radius:25px;
 	float: left;
-	font-family: corbert, 微软雅黑;
+	font-family: 'Microsoft YaHei';
+	padding: 20px;
+	margin: 20px;
+	text-indent: 2em;
 	line-height: 2em;
 }
 
