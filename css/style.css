@@ -65,13 +65,13 @@ body{
 }
 
 #journal-title, #homework-title{
-	width: 10%;
+	width: 12%;
 	height: auto;
 	border: none;
 	font-weight:bold;
 	float: left;
 	padding: 10px;
-	font-size: 1.5em;
+	font-size: 1.2em;
 	font-family: graystroke, 微软雅黑;
 }
 
