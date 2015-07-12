@@ -1,0 +1,98 @@
+<!DOCTYPE HTML>
+<html>
+	<head id = "head" class = "head">
+		<title id = "title" class = "head">
+			Test Page
+		</title>
+		<meta charset="UTF-8">
+		<script src = "./1.js" id = "script"></script>
+		<script src = "./2.js" id = "script"></script>
+		<script src = "./3.js" id = "script"></script>
+	</head>
+	
+	<body id = "body" class = "body">
+		
+		<div id = "input">
+			<p> Content: </p> <input id = "input-content" />
+			<p> Draggable: </p> <input id = "input-draggable" />
+			<p> CloseKey(KeyCode): </p> <input id = "input-closekey" />
+			<br/>
+			<button type = "button" id = "input-button" onclick = "showMsgBox()">弹出弹窗 </button>
+		</div>
+		
+		<div id = "div1" class = "body">
+			Hello world!
+		</div>
+		
+		<div id = "div2" class = "body">
+			<p>I hate JS!(按Ctrl-Shift-Alt-T返回顶部)</p>
+			<p>I hate JS!(按Ctrl-Shift-Alt-T返回顶部)</p>
+			<p>I hate JS!(按Ctrl-Shift-Alt-T返回顶部)</p>
+			<p>I hate JS!(按Ctrl-Shift-Alt-T返回顶部)</p>
+			<p>I hate JS!(按Ctrl-Shift-Alt-T返回顶部)</p>
+			<p>I hate JS!(按Ctrl-Shift-Alt-T返回顶部)</p>
+			<p>I hate JS!(按Ctrl-Shift-Alt-T返回顶部)</p>
+			<p>I hate JS!(按Ctrl-Shift-Alt-T返回顶部)</p>
+			<p>I hate JS!(按Ctrl-Shift-Alt-T返回顶部)</p>
+			<p>I hate JS!(按Ctrl-Shift-Alt-T返回顶部)</p>
+			<p>I hate JS!(按Ctrl-Shift-Alt-T返回顶部)</p>
+			<p>I hate JS!(按Ctrl-Shift-Alt-T返回顶部)</p>
+			<p>I hate JS!(按Ctrl-Shift-Alt-T返回顶部)</p>
+			<p>I hate JS!(按Ctrl-Shift-Alt-T返回顶部)</p>
+			<p>I hate JS!(按Ctrl-Shift-Alt-T返回顶部)</p>
+			<p>I hate JS!(按Ctrl-Shift-Alt-T返回顶部)</p>
+			<p>I hate JS!(按Ctrl-Shift-Alt-T返回顶部)</p>
+			<p>I hate JS!(按Ctrl-Shift-Alt-T返回顶部)</p>
+			<p>I hate JS!(按Ctrl-Shift-Alt-T返回顶部)</p>
+			<p>I hate JS!(按Ctrl-Shift-Alt-T返回顶部)</p>
+			<p>I hate JS!(按Ctrl-Shift-Alt-T返回顶部)</p>
+			<p>I hate JS!(按Ctrl-Shift-Alt-T返回顶部)</p>
+			<p>I hate JS!(按Ctrl-Shift-Alt-T返回顶部)</p>
+			<p>I hate JS!(按Ctrl-Shift-Alt-T返回顶部)</p>
+			<p>I hate JS!(按Ctrl-Shift-Alt-T返回顶部)</p>
+			<p>I hate JS!(按Ctrl-Shift-Alt-T返回顶部)</p>
+			<p>I hate JS!(按Ctrl-Shift-Alt-T返回顶部)</p>
+			<p>I hate JS!(按Ctrl-Shift-Alt-T返回顶部)</p>
+			<p>I hate JS!(按Ctrl-Shift-Alt-T返回顶部)</p>
+			<p>I hate JS!(按Ctrl-Shift-Alt-T返回顶部)</p>
+			<p>I hate JS!(按Ctrl-Shift-Alt-T返回顶部)</p>
+			<p>I hate JS!(按Ctrl-Shift-Alt-T返回顶部)</p>
+			<p>I hate JS!(按Ctrl-Shift-Alt-T返回顶部)</p>
+			<p>I hate JS!(按Ctrl-Shift-Alt-T返回顶部)</p>
+			<p>I hate JS!(按Ctrl-Shift-Alt-T返回顶部)</p>
+			<p>I hate JS!(按Ctrl-Shift-Alt-T返回顶部)</p>
+			<p>I hate JS!(按Ctrl-Shift-Alt-T返回顶部)</p>
+			<p>I hate JS!(按Ctrl-Shift-Alt-T返回顶部)</p>
+			<p>I hate JS!(按Ctrl-Shift-Alt-T返回顶部)</p>
+			<p>I hate JS!(按Ctrl-Shift-Alt-T返回顶部)</p>
+			<p>I hate JS!(按Ctrl-Shift-Alt-T返回顶部)</p>
+			<p>I hate JS!(按Ctrl-Shift-Alt-T返回顶部)</p>
+			<p>I hate JS!(按Ctrl-Shift-Alt-T返回顶部)</p>
+			<p>I hate JS!(按Ctrl-Shift-Alt-T返回顶部)</p>
+			<p>I hate JS!(按Ctrl-Shift-Alt-T返回顶部)</p>
+			<p>I hate JS!(按Ctrl-Shift-Alt-T返回顶部)</p>
+			<p>I hate JS!(按Ctrl-Shift-Alt-T返回顶部)</p>
+			<p>I hate JS!(按Ctrl-Shift-Alt-T返回顶部)</p>
+			<p>I hate JS!(按Ctrl-Shift-Alt-T返回顶部)</p>
+		</div>
+	
+		<script>
+			myButton = new BackToTop();
+			checkScroll();
+			//myMessage = new MessageBox();
+			//myMessage.init({draggable: false});
+			//myMessage.init({content: "Drag me!(CloseKey: Esc)"});
+			//myMessage.init({closeKey: 87});
+			
+			function showMsgBox(){
+				var myMessage = new MessageBox();
+				if (document.getElementById("input-draggable").value == "false") myMessage.init({draggable: false});
+				if (document.getElementById("input-closekey").value.length > 0) myMessage.init({closeKey: document.getElementById("input-closekey").value});
+				if (document.getElementById("input-content").value.length > 0) myMessage.init({content: document.getElementById("input-content").value});
+				else myMessage.init({content: "Drag me(please drag the title)!"});
+			}
+		</script>
+		
+	</body>
+	
+</html>
