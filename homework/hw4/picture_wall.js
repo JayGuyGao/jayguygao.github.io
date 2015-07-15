@@ -207,7 +207,7 @@ function getWindowHeight(){
 
 //判断滚动条是否到底部
 window.onscroll = function (evt) {
-	if(getScrollTop() + getWindowHeight() == getScrollHeight()){
+	if(getScrollTop() + getWindowHeight() +50 >= getScrollHeight()){
 		alert("you are in the bottom!");
 		if (imageInfo != null){
 			addPicture(10);
