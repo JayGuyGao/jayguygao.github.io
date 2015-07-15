@@ -182,11 +182,11 @@ function adjustPictureView(){
 	
 	node = document.getElementsByClassName("comment-item");
 	for (var i = 0; i < node.length; i ++){
-		node[i].setAttribute("style", "height: " + eachHeight + "px; width: 80%; margin-bottom: " + marginHeight + "px; margin-left: " + marginHeight + "px; background: white; border: solid white 1px; -webkit-box-shadow:0 0 10px rgba(0, 0, 0, .5); -moz-box-shadow:0 0 10px rgba(0, 0, 0, .5); box-shadow:0 0 10px rgba(0, 0, 0, .5);");
+		node[i].setAttribute("style", "float: left; height: " + eachHeight + "px; width: 80%; margin-bottom: " + marginHeight + "px; margin-left: " + marginHeight + "px; background: white; border: solid white 1px; -webkit-box-shadow:0 0 10px rgba(0, 0, 0, .5); -moz-box-shadow:0 0 10px rgba(0, 0, 0, .5); box-shadow:0 0 10px rgba(0, 0, 0, .5);");
 	}
 	node = document.getElementsByClassName("comment-button");
 	for (var i = 0; i < node.length; i ++){
-		node[i].setAttribute("style", "display: inline; height: " + buttonHeight + "px; width: 40%; margin: 2px; background: white; border: solid white 10px; -webkit-box-shadow:0 0 10px rgba(0, 0, 0, .5); -moz-box-shadow:0 0 10px rgba(0, 0, 0, .5); box-shadow:0 0 10px rgba(0, 0, 0, .5); border-radius: 4px;");
+		node[i].setAttribute("style", "float: left; height: " + buttonHeight + "px; width: 30%; margin: 2px; background: white; border: solid white 10px; -webkit-box-shadow:0 0 10px rgba(0, 0, 0, .5); -moz-box-shadow:0 0 10px rgba(0, 0, 0, .5); box-shadow:0 0 10px rgba(0, 0, 0, .5); border-radius: 4px;");
 	}
 }
 
