@@ -3,6 +3,7 @@ currentState = "PictureWall";
 imageInfo = null;
 remainingPicture = 0;
 commentPage = 0;
+picIndex = 0;
 
 var tmpImg = document.getElementsByClassName("picture-item");
 for (var i = 0; i < tmpImg.length; i ++){
@@ -87,7 +88,7 @@ function clickPicture(evt) {
 	//创建图片
 	var img = document.createElement('img');
 	img.setAttribute("style", imgSty);
-	var picIndex = this.getElementsByTagName("img")[0].getAttribute("picture-index");
+	picIndex = this.getElementsByTagName("img")[0].getAttribute("picture-index");
 	img.setAttribute("src", imageInfo[picIndex].bigurl);
 
 	//创建评论容器
@@ -110,6 +111,19 @@ function clickPicture(evt) {
 	nextButton.setAttribute("class", "comment-button");
 	nextButton.setAttribute("style", "display: inline; height: 15%; width: 40%; margin: 2px; background: white; border: solid white 10px; -webkit-box-shadow:0 0 10px rgba(0, 0, 0, .5); -moz-box-shadow:0 0 10px rgba(0, 0, 0, .5); box-shadow:0 0 10px rgba(0, 0, 0, .5); border-radius: 4px;");
 	
+	prevButton.onclick = function (evt){
+		if (commentPage > 0){
+			commentPage --;
+			loadComment();
+		}
+	}
+	nextButton.onclick = function (evt){
+		if (commentPage < imageInfo[picIndex].commenturl.length - 1){
+			commentPage ++;
+			loadComment();
+		}
+	}
+	
 	var pNode = document.createElement("p");
 	var txtNode = document.createTextNode("上一页");
 	pNode.appendChild(txtNode);
@@ -123,6 +137,25 @@ function clickPicture(evt) {
 	commentlist.appendChild(prevButton);
 	commentlist.appendChild(nextButton);
 	
+	loadComment();
+	
+	pic.appendChild(img);
+	container.appendChild(pic);
+	container.appendChild(commentlist);
+	
+	
+	var body = document.body;
+	body.appendChild(bg);
+	body.appendChild(container);
+	
+	img.onload = function (evt) {
+		adjustPictureView();
+	}
+	
+	evt.stopPropagation();
+}
+
+function loadComment(){
 	var ajax = new XMLHttpRequest();
 	ajax.open("GET", imageInfo[picIndex].commenturl[commentPage], true);
 	ajax.send();
@@ -151,23 +184,6 @@ function clickPicture(evt) {
 			adjustPictureView();
 		}
 	}
-	
-	
-	
-	pic.appendChild(img);
-	container.appendChild(pic);
-	container.appendChild(commentlist);
-	
-	
-	var body = document.body;
-	body.appendChild(bg);
-	body.appendChild(container);
-	
-	img.onload = function (evt) {
-		adjustPictureView();
-	}
-	
-	evt.stopPropagation();
 }
 
 function adjustPictureView(){

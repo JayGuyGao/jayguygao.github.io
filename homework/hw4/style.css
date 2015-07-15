@@ -109,6 +109,13 @@ body{
 	font-family: 微软雅黑;
 }
 
+.comment-button  > p{
+	padding: 2px;
+	font-size: 0.7em;
+	font-family: 微软雅黑;
+	text-align: center;
+}
+
 #journal-list, #homework-list{
 	width: 40%;
 	height: auto;
