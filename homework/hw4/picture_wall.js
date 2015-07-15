@@ -107,7 +107,7 @@ function clickPicture(evt) {
 	ajax.open("GET", imageInfo[picIndex].commenturl[commentPage], true);
 	ajax.send();
 	ajax.onreadystatechange = function (){
-		var commentlist = document.getElementById(comment-list);
+		var commentlist = document.getElementById("comment-list");
 		if (!commentlist){
 			return;
 		}
