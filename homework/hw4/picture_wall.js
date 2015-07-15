@@ -168,9 +168,9 @@ function clickbg(evt) {
 //document.body.addEventListener("click", , false);
 
 window.onscroll = function (evt) {
-	var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-	var offsetHeight = document.documentElement.offsetHeight || document.body.offsetHeight;
-	var clientHeight = document.documentElement.clientHeight || document.body.clientHeight;
+	var scrollTop = document.body.scrollTop;
+	var offsetHeight = document.body.offsetHeight;
+	var clientHeight = document.body.clientHeight;
 	if (scrollTop >= offsetHeight - clientHeight) {
 		if (imageInfo != null){
 			addPicture(10);
