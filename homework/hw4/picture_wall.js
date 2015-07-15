@@ -62,7 +62,7 @@ function addOnePicture(){
 	}
 	else{
 		picImg.onload = function (){
-			this.removeChild(this.firstChild);
+			this.parentNode.removeChild(this.parentNode.firstChild);
 		}
 	}
 }
