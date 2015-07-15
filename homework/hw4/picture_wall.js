@@ -1,4 +1,4 @@
-currentPicture = 3;
+currentPicture = 2;
 currentState = "PictureWall";
 imageInfo = null;
 remainingPicture = 0;
@@ -12,13 +12,14 @@ for (var i = 0; i < tmpImg.length; i ++){
 //添加1张图片
 function addOnePicture(){
 	//计算当前添加图片
-	currentPicture = (currentPicture % 50) + 1;
+	currentPicture = (currentPicture + 1) % imageInfo.length;
 		
 	//新建图片节点
 	var picDiv = document.createElement('div');
 	picDiv.setAttribute("class", "picture-item");
 	var picImg = document.createElement('img');
-	picImg.src = "./images/" + currentPicture + ".jpg";
+	picImg.src = imageInfo[currentPicture].miniurl;
+	picImg.setAttribute("picture-index", currentPicture);
 	picImg.setAttribute("class", "image");
 	picDiv.appendChild(picImg);
 	picDiv.addEventListener("click", clickPicture, false);
