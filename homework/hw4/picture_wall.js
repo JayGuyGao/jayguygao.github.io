@@ -171,7 +171,7 @@ window.onscroll = function (evt) {
 	var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
 	var scrollHeight = document.documentElement.scrollHeight || document.body.scrollHeight;
 	var clientHeight = document.documentElement.clientHeight || document.body.clientHeight;
-	if (scrollTop >= scrollHeight - clientHeight) {
+	if (scrollTop >= scrollHeight - clientHeight - 500) {
 		if (imageInfo != null){
 			addPicture(10);
 		}
