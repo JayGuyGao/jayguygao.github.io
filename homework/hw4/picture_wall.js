@@ -25,6 +25,9 @@ function addOnePicture(){
 	picImg.src = imageInfo[currentPicture].miniurl;
 	picImg.setAttribute("picture-index", currentPicture);
 	picImg.setAttribute("class", "image");
+	
+	var txtNode = document.createTextNode("正在用吃奶的力气为您加载图片(也许这张图片跪了T_T)");
+	picDiv.appendChild(txtNode);
 	picDiv.appendChild(picImg);
 	picDiv.addEventListener("click", clickPicture, false);
 	
@@ -52,7 +55,15 @@ function addOnePicture(){
 	
 	remainingPicture --;
 	if (remainingPicture){
-		picImg.onload = addOnePicture;
+		picImg.onload = function (){
+			this.parentNode.removeChild(this.parentNode.firstChild);
+			addOnePicture();
+		} 
+	}
+	else{
+		picImg.onload = function (){
+			this.removeChild(this.firstChild);
+		}
 	}
 }
 
@@ -76,7 +87,7 @@ function clickPicture(evt) {
 	
 	//创建蒙版
 	var bg = document.createElement('div');
-	bg.setAttribute("style", "width: 100%; height: 100%; position:fixed; z-index: 1000; top:0px; left:0px; background: #FFFFFF; filter: alpha(0pacity=50); -moz-opacity:0.50; opacity:0.50;");
+	bg.setAttribute("style", "width: 100%; height: 100%; position:fixed; z-index: 1000; top:0px; left:0px; background: #FFFFFF; filter: alpha(0pacity=80); -moz-opacity:0.80; opacity:0.80;");
 	bg.setAttribute("id", 'background');
 	bg.addEventListener("click", clickbg, false);
 	
@@ -154,9 +165,6 @@ function clickPicture(evt) {
 	commentlist.appendChild(prevButton);
 	commentlist.appendChild(nextButton);
 	
-	commentPage = 0;
-	loadComment();
-	
 	pic.appendChild(img);
 	container.appendChild(pic);
 	container.appendChild(commentlist);
@@ -167,10 +175,11 @@ function clickPicture(evt) {
 	body.appendChild(container);
 	
 	img.onload = function (evt) {
+		//创建“查看大图”按钮
 		var divNode = document.createElement("div");
 		var aNode = document.createElement("a");
 		var txtNode = document.createTextNode("查看大图");
-		divNode.setAttribute("style", "display: inline; margin-top: 40px; height: auto; width: auto; margin: 2px; background: white; border: solid white 10px; -webkit-box-shadow:0 0 10px rgba(0, 0, 0, .5); -moz-box-shadow:0 0 10px rgba(0, 0, 0, .5); box-shadow:0 0 10px rgba(0, 0, 0, .5); border-radius: 4px; text-align: center;");
+		divNode.setAttribute("style", "clear: left; display: block; margin-top: 10px; height: 10px; width: " + document.getElementById("picture-view").clientWidth + "px; background: white; border: solid white 10px; -webkit-box-shadow:0 0 10px rgba(0, 0, 0, .5); -moz-box-shadow:0 0 10px rgba(0, 0, 0, .5); box-shadow:0 0 10px rgba(0, 0, 0, .5); border-radius: 4px; text-align: center;");
 		aNode.setAttribute("href", imageInfo[picIndex].bigurl);
 		aNode.setAttribute("class", "bigimage-link");
 		aNode.appendChild(txtNode);
@@ -180,10 +189,25 @@ function clickPicture(evt) {
 		adjustPictureView();
 	}
 	
+	commentPage = 0;
+	loadComment();
+	
 	evt.stopPropagation();
 }
 
 function loadComment(){
+	var commentNode = document.getElementsByClassName('comment-item');
+	if (!commentNode){
+		return;
+	}
+	for (var i = 0; i < commentNode.length; i ++){
+		while (commentNode[i].firstChild) {
+			commentNode[i].removeChild(commentNode[i].firstChild);
+		}
+		var txtNode = document.createTextNode("正在用吃奶的力气为您加载评论...");
+		commentNode[i].appendChild(txtNode);
+	}
+	
 	var ajax = new XMLHttpRequest();
 	ajax.open("GET", imageInfo[picIndex].commenturl[commentPage], true);
 	ajax.send();
@@ -222,10 +246,10 @@ function adjustPictureView(){
 	container.style.left = Math.floor((window.innerWidth - container.clientWidth) / 2) + "px";
 	var node = document.getElementById("comment-list");
 	//node.setAttribute("style", "height: "document.getElementById("picture-view-container").clientHeight" width: 300px; float:left;");
-	node.style.height = document.getElementById("picture-view-container").clientHeight + "px";
-	var marginHeight = document.getElementById("picture-view-container").clientHeight / 50;
+	node.style.height = document.getElementById("picture-view").clientHeight + "px";
+	var marginHeight = document.getElementById("picture-view").clientHeight / 50;
 	var buttonHeight = marginHeight * 2;
-	var eachHeight = (document.getElementById("picture-view-container").clientHeight - 2 * 6 - marginHeight * 5 - buttonHeight) / 5;
+	var eachHeight = (document.getElementById("picture-view").clientHeight - 1 * 6 - marginHeight * 5 - buttonHeight) / 5;
 	
 	node = document.getElementsByClassName("comment-item");
 	for (var i = 0; i < node.length; i ++){
@@ -336,7 +360,7 @@ function locationSuccess(position){
 if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(locationSuccess, locationError,{
         // 指示浏览器获取高精度的位置，默认为false
-        enableHighAcuracy: false,
+        enableHighAcuracy: true,
         // 指定获取地理位置的超时时间，默认不限时，单位为毫秒
         timeout: 5000,
         // 最长有效期，在重复获取地理位置时，此参数指定多久再次获取位置。

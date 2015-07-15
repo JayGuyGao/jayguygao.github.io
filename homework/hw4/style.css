@@ -35,6 +35,18 @@ body{
 	box-shadow:0 0 10px rgba(0, 0, 0, .5);
 }
 
+.picture-item:hover{
+	width: 100%;
+	height: auto;
+	margin-top: 20px;
+	border: solid #CCCCCC 10px;
+	background: white;
+	background: white;
+	-webkit-box-shadow:0 0 100px rgba(0, 0, 0, .7);
+	-moz-box-shadow:0 0 100px rgba(0, 0, 0, .7);
+	box-shadow:0 0 100px rgba(0, 0, 0, .7);
+}
+
 .picture-distance{
 	height: auto;
 	width: 100%;
@@ -50,9 +62,12 @@ body{
 }
 
 .bigimage-link {
+	padding-top: 2px;
+	margin-bottom: 20px;
 	color: black;
 	text-decoration:none;
 	font-family: 微软雅黑;
+	font-size:0.8em;
 }
 
 .image{
