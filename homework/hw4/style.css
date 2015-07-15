@@ -1,0 +1,161 @@
+@font-face{
+	font-family: 'graystroke';
+	src: url('GRAYSTROKE REGULAR.otf');
+}
+
+@font-face{
+	font-family: 'corbert';
+	src: url('Corbert_Regular_Regular.otf');
+}
+
+body{
+	background-color: #e6e6e6;
+	margin: 0px 0px;
+	padding: 0px 0px;
+}
+
+.picture-list{
+	display: block;
+	float: left;
+	width: 30%;
+	padding: 1.5%;
+	height: auto;
+	margin-top: 20px;
+}
+
+.picture-item{
+
+	width: 100%;
+	height: auto;
+	margin-top: 20px;
+	border: solid white 10px;
+	-webkit-box-shadow:0 0 10px rgba(0, 0, 0, .5);
+	-moz-box-shadow:0 0 10px rgba(0, 0, 0, .5);
+	box-shadow:0 0 10px rgba(0, 0, 0, .5);
+}
+
+.image{
+	width: 100%;
+	height: auto;
+	padding: 0px;
+	margin: 0px;
+}
+
+#title{
+	clear:both;
+	background: #333333;
+	width: 100%;
+	height: auto;
+	text-align: center;
+	padding: 10px;
+}
+
+#title-link{
+	color: #e6e6e6;
+	font-size: 5em;
+	font-family: graystroke, 微软雅黑;
+	font-variant:small-caps;
+	font-weight:bold;
+	text-decoration:none;
+	text-align:center;
+	padding-top:30px;
+}
+
+#profile{
+	width: 35%;
+	height: auto;
+	float: right;
+	border:2px solid #333333;
+	border-radius:25px;
+	margin: 15px;
+	margin-right: 25px;
+}
+
+#profile:hover, #journal-list:hover, #homework-list:hover{
+	background-color: #CCCCCC;
+}
+
+.profile-content{
+	padding:15px;
+	font-family: 微软雅黑;
+	font-size: 0.9em;
+}
+
+#portrait{
+	padding: 20px;
+	float: right;
+	width: 22%;
+	height: auto;
+}
+
+#homework{
+	clear: left;
+}
+
+#journal-title, #homework-title{
+	width: 12%;
+	height: auto;
+	border: none;
+	font-weight:bold;
+	float: left;
+	padding: 10px;
+	font-size: 1.2em;
+	font-family: graystroke, 微软雅黑;
+}
+
+.comment-item  > p{
+	padding: 10px;
+	font-size: 1em;
+	font-family: 微软雅黑;
+}
+
+#journal-list, #homework-list{
+	width: 40%;
+	height: auto;
+	border:2px solid #333333;
+	border-radius:25px;
+	float: left;
+	font-family: corbert, 微软雅黑;
+	line-height: 2em;
+}
+
+.journal-link:link, .journal-link:visited, .homework-link:link, .homework-link:visited{
+	text-decoration:none;
+	color: #000000;
+}
+
+
+.journal-link:hover, .homework-link:hover{
+	background-color: #999999;
+}
+
+#footer{
+	clear:both;
+	margin-top: 60px;
+	background: #333333;
+	width: 100%;
+	height: 70px;
+	text-align: center;
+}
+
+#footer > p{
+	padding-top: 30px;
+	color: #e6e6e6;
+	font-size: 1em;
+	font-family: Arial;
+}
+
+#go-back{
+	clear:left;
+	font-weight:700;
+	margin-top:20px;
+	height:auto;
+	float:left;
+	width:90%;
+	border:none;
+	padding:10px;
+	font-size:1em;
+	font-family:graystroke,'Microsoft YaHei';
+	text-align:right;
+	color:#333;
+}
