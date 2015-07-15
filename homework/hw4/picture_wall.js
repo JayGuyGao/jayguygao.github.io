@@ -123,11 +123,12 @@ function clickPicture(evt) {
 				var tmpNode = document.createElement("div");
 				var txt = document.createTextNode("顶:(" + commentItem[i].agree + ") 踩:(" + commentItem[i].disagree + ")");
 				tmpNode.appendChild(txt);
-				tmpNode.setAttribute("style", "width: 90%; height: auto; text-align: right; font-family: 微软雅黑; font-size: 1em; color: grey;");
+				tmpNode.setAttribute("style", "width: 90%; height: auto; text-align: right; font-family: 微软雅黑; font-size: 0.6em; color: grey;");
 				
 				comment.appendChild(tmpP);
 				comment.appendChild(tmpNode);
 			}
+			adjustPictureView();
 		}
 	}
 	
@@ -145,19 +146,23 @@ function clickPicture(evt) {
 	container.style.left = Math.floor((window.innerWidth - container.clientWidth) / 2) + "px";
 	
 	img.onload = function (evt) {
-		var node = document.getElementById("comment-list");
-		//node.setAttribute("style", "height: "document.getElementById("picture-view-container").clientHeight" width: 300px; float:left;");
-		node.style.height = document.getElementById("picture-view-container").clientHeight + "px";
-		var marginHeight = document.getElementById("picture-view-container").clientHeight / 50;
-		var eachHeight = (document.getElementById("picture-view-container").clientHeight - 2 - marginHeight * 5) / 5;
-		
-		node = document.getElementsByClassName("comment-item");
-		for (var i = 0; i < node.length; i ++){
-			node[i].setAttribute("style", "height: " + eachHeight + "px; width: 80%; margin-bottom: " + marginHeight + "px; margin-left: " + marginHeight + "px; background: white; border: solid white 1px; -webkit-box-shadow:0 0 10px rgba(0, 0, 0, .5); -moz-box-shadow:0 0 10px rgba(0, 0, 0, .5); box-shadow:0 0 10px rgba(0, 0, 0, .5);");
-		}
+		adjustPictureView();
 	}
 	
 	evt.stopPropagation();
+}
+
+function adjustPIctureView(){
+	var node = document.getElementById("comment-list");
+	//node.setAttribute("style", "height: "document.getElementById("picture-view-container").clientHeight" width: 300px; float:left;");
+	node.style.height = document.getElementById("picture-view-container").clientHeight + "px";
+	var marginHeight = document.getElementById("picture-view-container").clientHeight / 50;
+	var eachHeight = (document.getElementById("picture-view-container").clientHeight - 2 - marginHeight * 5) / 5;
+	
+	node = document.getElementsByClassName("comment-item");
+	for (var i = 0; i < node.length; i ++){
+		node[i].setAttribute("style", "height: " + eachHeight + "px; width: 80%; margin-bottom: " + marginHeight + "px; margin-left: " + marginHeight + "px; background: white; border: solid white 1px; -webkit-box-shadow:0 0 10px rgba(0, 0, 0, .5); -moz-box-shadow:0 0 10px rgba(0, 0, 0, .5); box-shadow:0 0 10px rgba(0, 0, 0, .5);");
+	}
 }
 
 function GetDistance(lat1, lng1, lat2, lng2){
