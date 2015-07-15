@@ -115,7 +115,7 @@ function clickPicture(evt) {
 			var commentItem = JSON.parse(ajax.responseText);
 			var commentNode = document.getElementsByClassName('comment-item');
 			for (var i = 0; i < 5; i ++){
-				var comment = comentNode[i];
+				var comment = commentNode[i];
 				var tmpP = document.createElement('p');
 				var txt = document.createTextNode(commentItem[i].name + ": " + commentItem[i].comment);
 				tmpP.appendChild(txt);
