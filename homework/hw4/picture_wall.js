@@ -4,6 +4,8 @@ imageInfo = null;
 remainingPicture = 0;
 commentPage = 0;
 picIndex = 0;
+localLongitude = 45;
+localLatitude = 90;
 
 var tmpImg = document.getElementsByClassName("picture-item");
 for (var i = 0; i < tmpImg.length; i ++){
@@ -25,6 +27,15 @@ function addOnePicture(){
 	picImg.setAttribute("class", "image");
 	picDiv.appendChild(picImg);
 	picDiv.addEventListener("click", clickPicture, false);
+	
+	var divNode = document.createElement("div");
+	divNode.setAttribute("class", "picture-distance");
+	var pNode = document.createElement("p");
+	var txtNode = document.createTextNode(Math.floor(getDistance(localLatitude, localLongitude, imageInfo[currentPicture].latitude, imageInfo[currentPicture].longitude)) + "千米");
+	pNode.appendChild(txtNode);
+	divNode.appendChild(pNode);
+	picDiv.appendChild(divNode);
+
 	
 	//查找最短的那一列
 	var listPointer = document.getElementById("list0");
@@ -116,11 +127,17 @@ function clickPicture(evt) {
 			commentPage --;
 			loadComment();
 		}
+		else{
+			alert("对不起，这是第一页了...0 0");
+		}
 	}
 	nextButton.onclick = function (evt){
 		if (commentPage < imageInfo[picIndex].commenturl.length - 1){
 			commentPage ++;
 			loadComment();
+		}
+		else{
+			alert("对不起，这是最后一页了...0 0");
 		}
 	}
 	
@@ -137,6 +154,7 @@ function clickPicture(evt) {
 	commentlist.appendChild(prevButton);
 	commentlist.appendChild(nextButton);
 	
+	commentPage = 0;
 	loadComment();
 	
 	pic.appendChild(img);
@@ -149,6 +167,16 @@ function clickPicture(evt) {
 	body.appendChild(container);
 	
 	img.onload = function (evt) {
+		var divNode = document.createElement("div");
+		var aNode = document.createElement("a");
+		var txtNode = document.createTextNode("查看大图");
+		divNode.setAttribute("style", "display: inline; margin-top: 40px; height: auto; width: auto; margin: 2px; background: white; border: solid white 10px; -webkit-box-shadow:0 0 10px rgba(0, 0, 0, .5); -moz-box-shadow:0 0 10px rgba(0, 0, 0, .5); box-shadow:0 0 10px rgba(0, 0, 0, .5); border-radius: 4px; text-align: center;");
+		aNode.setAttribute("href", imageInfo[picIndex].bigurl);
+		aNode.setAttribute("class", "bigimage-link");
+		aNode.appendChild(txtNode);
+		divNode.appendChild(aNode);
+		document.getElementById("picture-view-container").appendChild(divNode);
+		
 		adjustPictureView();
 	}
 	
@@ -205,17 +233,18 @@ function adjustPictureView(){
 	}
 	node = document.getElementsByClassName("comment-button");
 	for (var i = 0; i < node.length; i ++){
-		node[i].setAttribute("style", "float: left; height: " + buttonHeight + "px; margin-left: " + marginHeight + "px; width: 30%; background: white; border: solid white 1px; -webkit-box-shadow:0 0 10px rgba(0, 0, 0, .5); -moz-box-shadow:0 0 10px rgba(0, 0, 0, .5); box-shadow:0 0 10px rgba(0, 0, 0, .5); border-radius: 4px;");
+		node[i].setAttribute("style", "float: left; height: " + buttonHeight + "px; margin-left: " + marginHeight * 2 + "px; width: 30%; background: white; border: solid white 1px; -webkit-box-shadow:0 0 10px rgba(0, 0, 0, .5); -moz-box-shadow:0 0 10px rgba(0, 0, 0, .5); box-shadow:0 0 10px rgba(0, 0, 0, .5); border-radius: 4px;");
 	}
 }
 
-function GetDistance(lat1, lng1, lat2, lng2){
+function getDistance(lat1, lng1, lat2, lng2){
 	function Rad(d){
        return d * Math.PI / 180.0;//经纬度转换成三角函数中度分表形式。
     }
 	var radLat1 = Rad(lat1);
+	var radLat2 = Rad(lat2);
 	var a = radLat1 - radLat2;
-	var  b = Rad(lng1) - Rad(lng2);
+	var b = Rad(lng1) - Rad(lng2);
 	var s = 2 * Math.asin(Math.sqrt(Math.pow(Math.sin(a/2),2) +
 	Math.cos(radLat1)*Math.cos(radLat2)*Math.pow(Math.sin(b/2),2)));
 	s = s * 6378.137 ;// EARTH_RADIUS;
@@ -281,6 +310,42 @@ window.onscroll = function (evt) {
 	}
 }
 
+function locationError(error){
+    switch(error.code) {
+        case error.TIMEOUT:
+            alert("A timeout occured! Please try again!");
+            break;
+        case error.POSITION_UNAVAILABLE:
+            alert('We can\'t detect your location. Sorry!');
+            break;
+        case error.PERMISSION_DENIED:
+            alert('Please allow geolocation access for this to work.');
+            break;
+        case error.UNKNOWN_ERROR:
+            alert('An unknown error occured!');
+            break;
+    }
+}
+
+function locationSuccess(position){
+    var coords = position.coords;
+	localLatitude = coords.latitude;
+	localLongitude = coords.longitude;
+}
+
+if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(locationSuccess, locationError,{
+        // 指示浏览器获取高精度的位置，默认为false
+        enableHighAcuracy: false,
+        // 指定获取地理位置的超时时间，默认不限时，单位为毫秒
+        timeout: 5000,
+        // 最长有效期，在重复获取地理位置时，此参数指定多久再次获取位置。
+        maximumAge: 3000
+    });
+}else{
+    alert("Your browser does not support Geolocation!");
+}
+
 window.onload = function(evt){
 	var ajax = new XMLHttpRequest();
 	ajax.open("GET", "./jsons/image_request.json", true);
@@ -288,6 +353,17 @@ window.onload = function(evt){
 	ajax.onreadystatechange = function (){
 		if (ajax.readyState == 4 && ajax.status == 200){
 			imageInfo = JSON.parse(ajax.responseText);
+			
+			var picNode = document.getElementsByClassName("picture-item");
+			for (var i = 0; i < picNode.length; i ++){
+				var divNode = document.createElement("div");
+				divNode.setAttribute("class", "picture-distance");
+				var pNode = document.createElement("p");
+				var txtNode = document.createTextNode(Math.floor(getDistance(localLatitude, localLongitude, imageInfo[i].latitude, imageInfo[i].longitude)) + "千米");
+				pNode.appendChild(txtNode);
+				divNode.appendChild(pNode);
+				picNode[i].appendChild(divNode);
+			}
 		}
 	}
 }
