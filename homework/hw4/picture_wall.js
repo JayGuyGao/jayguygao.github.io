@@ -169,6 +169,9 @@ function loadComment(){
 			var commentNode = document.getElementsByClassName('comment-item');
 			for (var i = 0; i < 5; i ++){
 				var comment = commentNode[i];
+				while (comment.firstChild()) {
+					comment.removeChild(comment.firstChild());
+				}
 				var tmpP = document.createElement('p');
 				var txt = document.createTextNode(commentItem[i].name + ": " + commentItem[i].comment);
 				tmpP.appendChild(txt);
