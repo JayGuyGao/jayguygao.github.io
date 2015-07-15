@@ -96,6 +96,7 @@ function clickPicture(evt) {
 	commentlist.setAttribute("style", "height: 100%; width: 300px; float:left;");
 	
 	for (var i = 0; i < 5; i ++){
+		var comment = document.createElement('div');
 		comment.setAttribute("style", "height: 15%; width: 80%; margin: 2px; background: white; border: solid white 10px; -webkit-box-shadow:0 0 10px rgba(0, 0, 0, .5); -moz-box-shadow:0 0 10px rgba(0, 0, 0, .5); box-shadow:0 0 10px rgba(0, 0, 0, .5);");
 		comment.setAttribute("class", "comment-item");
 		commentlist.appendChild(comment);
