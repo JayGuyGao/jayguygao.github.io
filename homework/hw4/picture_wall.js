@@ -143,8 +143,6 @@ function clickPicture(evt) {
 	body.appendChild(bg);
 	body.appendChild(container);
 	
-	container.style.left = Math.floor((window.innerWidth - container.clientWidth) / 2) + "px";
-	
 	img.onload = function (evt) {
 		adjustPictureView();
 	}
@@ -153,6 +151,8 @@ function clickPicture(evt) {
 }
 
 function adjustPictureView(){
+	var container = document.getElementById("picture-view-container");
+	container.style.left = Math.floor((window.innerWidth - container.clientWidth) / 2) + "px";
 	var node = document.getElementById("comment-list");
 	//node.setAttribute("style", "height: "document.getElementById("picture-view-container").clientHeight" width: 300px; float:left;");
 	node.style.height = document.getElementById("picture-view-container").clientHeight + "px";
