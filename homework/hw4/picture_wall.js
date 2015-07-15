@@ -2,6 +2,7 @@ currentPicture = 2;
 currentState = "PictureWall";
 imageInfo = null;
 remainingPicture = 0;
+commentPage = 0;
 
 var tmpImg = document.getElementsByClassName("picture-item");
 for (var i = 0; i < tmpImg.length; i ++){
@@ -86,31 +87,49 @@ function clickPicture(evt) {
 	//创建图片
 	var img = document.createElement('img');
 	img.setAttribute("style", imgSty);
-	img.setAttribute("src", this.getElementsByTagName("img")[0].src);
+	var picIndex = this.getElementsByTagName("img")[0].getAttribute("picture-index");
+	img.setAttribute("src", imageInfo[picIndex].bigurl);
 
-	
 	//创建评论容器
 	var commentlist = document.createElement('div');
 	commentlist.setAttribute("id", "comment-list");
 	commentlist.setAttribute("style", "height: 100%; width: 300px; float:left;");
+	
 	for (var i = 0; i < 5; i ++){
-		var comment = document.createElement('div');
 		comment.setAttribute("style", "height: 15%; width: 80%; margin: 2px; background: white; border: solid white 10px; -webkit-box-shadow:0 0 10px rgba(0, 0, 0, .5); -moz-box-shadow:0 0 10px rgba(0, 0, 0, .5); box-shadow:0 0 10px rgba(0, 0, 0, .5);");
-		comment.setAttribute("class", "comment-item")
-		;
-		var tmpP = document.createElement('p');
-		var txt = document.createTextNode("JayGuy: 你是猴子请来的逗比吗");
-		tmpP.appendChild(txt);
-		
-		var tmpNode = document.createElement("div");
-		var txt = document.createTextNode("顶:(0) 踩:(0)");
-		tmpNode.appendChild(txt);
-		tmpNode.setAttribute("style", "width: 90%; height: auto; text-align: right; font-family: 微软雅黑; font-size: 1em; color: grey;");
-		
-		comment.appendChild(tmpP);
-		comment.appendChild(tmpNode);
+		comment.setAttribute("class", "comment-item");
 		commentlist.appendChild(comment);
 	}
+				
+	
+	var ajax = new XMLHttpRequest();
+	ajax.open("GET", imageInfo[picIndex].commenturl[commentPage], true);
+	ajax.send();
+	ajax.onreadystatechange = function (){
+		var commentlist = document.getElementById(comment-list);
+		if (!commentlist){
+			return;
+		}
+		if (ajax.readyState == 4 && ajax.status == 200){
+			var commentItem = JSON.parse(ajax.responseText);
+			var commentNode = document.getElementsByClassName('comment-item');
+			for (var i = 0; i < 5; i ++){
+				var comment = comentNode[i];
+				var tmpP = document.createElement('p');
+				var txt = document.createTextNode(commentItem[i].name + ": " + commentItem[i].comment);
+				tmpP.appendChild(txt);
+				
+				var tmpNode = document.createElement("div");
+				var txt = document.createTextNode("顶:(" + commentItem[i].agree + ") 踩:(" + commentItem[i].disagree + ")");
+				tmpNode.appendChild(txt);
+				tmpNode.setAttribute("style", "width: 90%; height: auto; text-align: right; font-family: 微软雅黑; font-size: 1em; color: grey;");
+				
+				comment.appendChild(tmpP);
+				comment.appendChild(tmpNode);
+			}
+		}
+	}
+	
 	
 	
 	pic.appendChild(img);
@@ -165,8 +184,6 @@ function clickbg(evt) {
 	document.body.removeChild(bg);
 	document.body.removeChild(container);
 }
-//document.body.addEventListener("click", , false);
-
 
 //滚动条在Y轴上的滚动距离
 function getScrollTop(){
@@ -208,7 +225,6 @@ function getWindowHeight(){
 //判断滚动条是否到底部
 window.onscroll = function (evt) {
 	if (getScrollTop() + getWindowHeight() +50 >= getScrollHeight()){
-		//alert("you are in the bottom!");
 		if (imageInfo != null && remainingPicture === 0){
 			addPicture(10);
 		}

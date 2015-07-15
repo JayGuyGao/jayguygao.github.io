@@ -1,32 +1,35 @@
 [
 	{"bigurl": "./images/1.jpg",
 	 "miniurl": "./images/mini1.jpg",
-	 "latitude": 27.615,
-	 "longitude": 102.055,
+	 "latitude": 42.5129,
+	 "longitude": 87.2121,
 	 "commenturl": [
-		 "./jsons/image_comment_1_1.json"
+		 "./jsons/image_comment_1_1.json",
+		 "./jsons/image_comment_1_2.json",
+		 "./jsons/image_comment_1_3.json"
 	]},
 	{"bigurl": "./images/2.jpg",
 	 "miniurl": "./images/mini2.jpg",
-	 "latitude": 89.9615,
-	 "longitude": 149.935,
+	 "latitude": 58.2211,
+	 "longitude": 107.027,
 	 "commenturl": [
 		 "./jsons/image_comment_2_1.json",
-		 "./jsons/image_comment_2_2.json",
-		 "./jsons/image_comment_2_3.json"
+		 "./jsons/image_comment_2_2.json"
 	]},
 	{"bigurl": "./images/3.jpg",
 	 "miniurl": "./images/mini3.jpg",
-	 "latitude": 19.2871,
-	 "longitude": 88.146,
+	 "latitude": 81.6721,
+	 "longitude": 114.113,
 	 "commenturl": [
 		 "./jsons/image_comment_3_1.json",
-		 "./jsons/image_comment_3_2.json"
+		 "./jsons/image_comment_3_2.json",
+		 "./jsons/image_comment_3_3.json",
+		 "./jsons/image_comment_3_4.json"
 	]},
 	{"bigurl": "./images/4.jpg",
 	 "miniurl": "./images/mini4.jpg",
-	 "latitude": 72.3719,
-	 "longitude": 156.044,
+	 "latitude": 34.9953,
+	 "longitude": 31.6306,
 	 "commenturl": [
 		 "./jsons/image_comment_4_1.json",
 		 "./jsons/image_comment_4_2.json",
@@ -35,8 +38,8 @@
 	]},
 	{"bigurl": "./images/5.jpg",
 	 "miniurl": "./images/mini5.jpg",
-	 "latitude": 48.009,
-	 "longitude": 14.7002,
+	 "latitude": 67.2521,
+	 "longitude": 163.471,
 	 "commenturl": [
 		 "./jsons/image_comment_5_1.json",
 		 "./jsons/image_comment_5_2.json",
@@ -45,187 +48,197 @@
 	]},
 	{"bigurl": "./images/6.jpg",
 	 "miniurl": "./images/mini6.jpg",
-	 "latitude": 48.4292,
-	 "longitude": 59.5257,
+	 "latitude": 49.5169,
+	 "longitude": 68.002,
 	 "commenturl": [
-		 "./jsons/image_comment_6_1.json"
+		 "./jsons/image_comment_6_1.json",
+		 "./jsons/image_comment_6_2.json",
+		 "./jsons/image_comment_6_3.json",
+		 "./jsons/image_comment_6_4.json"
 	]},
 	{"bigurl": "./images/7.jpg",
 	 "miniurl": "./images/mini7.jpg",
-	 "latitude": 20.9131,
-	 "longitude": 60.2014,
+	 "latitude": 87.3989,
+	 "longitude": 8.32789,
 	 "commenturl": [
-		 "./jsons/image_comment_7_1.json"
+		 "./jsons/image_comment_7_1.json",
+		 "./jsons/image_comment_7_2.json",
+		 "./jsons/image_comment_7_3.json"
 	]},
 	{"bigurl": "./images/8.jpg",
 	 "miniurl": "./images/mini8.jpg",
-	 "latitude": 59.3747,
-	 "longitude": 56.3836,
+	 "latitude": 79.8071,
+	 "longitude": 74.3687,
 	 "commenturl": [
-		 "./jsons/image_comment_8_1.json"
+		 "./jsons/image_comment_8_1.json",
+		 "./jsons/image_comment_8_2.json",
+		 "./jsons/image_comment_8_3.json"
 	]},
 	{"bigurl": "./images/9.jpg",
 	 "miniurl": "./images/mini9.jpg",
-	 "latitude": 33.0726,
-	 "longitude": 126.176,
+	 "latitude": 71.666,
+	 "longitude": 151.297,
 	 "commenturl": [
 		 "./jsons/image_comment_9_1.json",
 		 "./jsons/image_comment_9_2.json",
-		 "./jsons/image_comment_9_3.json"
+		 "./jsons/image_comment_9_3.json",
+		 "./jsons/image_comment_9_4.json"
 	]},
 	{"bigurl": "./images/10.jpg",
 	 "miniurl": "./images/mini10.jpg",
-	 "latitude": 89.6759,
-	 "longitude": 1.21952,
+	 "latitude": 28.7988,
+	 "longitude": 61.0419,
 	 "commenturl": [
-		 "./jsons/image_comment_10_1.json"
+		 "./jsons/image_comment_10_1.json",
+		 "./jsons/image_comment_10_2.json",
+		 "./jsons/image_comment_10_3.json"
 	]},
 	{"bigurl": "./images/11.jpg",
 	 "miniurl": "./images/mini11.jpg",
-	 "latitude": 30.466,
-	 "longitude": 35.2342,
+	 "latitude": 67.9498,
+	 "longitude": 34.2949,
 	 "commenturl": [
 		 "./jsons/image_comment_11_1.json",
-		 "./jsons/image_comment_11_2.json"
+		 "./jsons/image_comment_11_2.json",
+		 "./jsons/image_comment_11_3.json"
 	]},
 	{"bigurl": "./images/12.jpg",
 	 "miniurl": "./images/mini12.jpg",
-	 "latitude": 69.4522,
-	 "longitude": 36.2011,
+	 "latitude": 79.8703,
+	 "longitude": 176.308,
 	 "commenturl": [
 		 "./jsons/image_comment_12_1.json",
-		 "./jsons/image_comment_12_2.json"
+		 "./jsons/image_comment_12_2.json",
+		 "./jsons/image_comment_12_3.json"
 	]},
 	{"bigurl": "./images/13.jpg",
 	 "miniurl": "./images/mini13.jpg",
-	 "latitude": 26.9558,
-	 "longitude": 166.267,
+	 "latitude": 73.3992,
+	 "longitude": 172.771,
 	 "commenturl": [
 		 "./jsons/image_comment_13_1.json",
 		 "./jsons/image_comment_13_2.json",
-		 "./jsons/image_comment_13_3.json"
+		 "./jsons/image_comment_13_3.json",
+		 "./jsons/image_comment_13_4.json"
 	]},
 	{"bigurl": "./images/14.jpg",
 	 "miniurl": "./images/mini14.jpg",
-	 "latitude": 49.6075,
-	 "longitude": 119.101,
+	 "latitude": 59.4571,
+	 "longitude": 61.1023,
 	 "commenturl": [
 		 "./jsons/image_comment_14_1.json",
 		 "./jsons/image_comment_14_2.json",
-		 "./jsons/image_comment_14_3.json"
+		 "./jsons/image_comment_14_3.json",
+		 "./jsons/image_comment_14_4.json"
 	]},
 	{"bigurl": "./images/15.jpg",
 	 "miniurl": "./images/mini15.jpg",
-	 "latitude": 13.5466,
-	 "longitude": 55.5925,
+	 "latitude": 14.8897,
+	 "longitude": 90.7114,
 	 "commenturl": [
 		 "./jsons/image_comment_15_1.json",
 		 "./jsons/image_comment_15_2.json"
 	]},
 	{"bigurl": "./images/16.jpg",
 	 "miniurl": "./images/mini16.jpg",
-	 "latitude": 10.3577,
-	 "longitude": 101.061,
+	 "latitude": 32.4052,
+	 "longitude": 20.6714,
 	 "commenturl": [
-		 "./jsons/image_comment_16_1.json",
-		 "./jsons/image_comment_16_2.json",
-		 "./jsons/image_comment_16_3.json",
-		 "./jsons/image_comment_16_4.json"
+		 "./jsons/image_comment_16_1.json"
 	]},
 	{"bigurl": "./images/17.jpg",
 	 "miniurl": "./images/mini17.jpg",
-	 "latitude": 19.8062,
-	 "longitude": 168.041,
+	 "latitude": 2.88675,
+	 "longitude": 102.907,
 	 "commenturl": [
 		 "./jsons/image_comment_17_1.json",
-		 "./jsons/image_comment_17_2.json",
-		 "./jsons/image_comment_17_3.json",
-		 "./jsons/image_comment_17_4.json"
+		 "./jsons/image_comment_17_2.json"
 	]},
 	{"bigurl": "./images/18.jpg",
 	 "miniurl": "./images/mini18.jpg",
-	 "latitude": 48.5034,
-	 "longitude": 142.283,
+	 "latitude": 27.5024,
+	 "longitude": 93.5185,
 	 "commenturl": [
 		 "./jsons/image_comment_18_1.json"
 	]},
 	{"bigurl": "./images/19.jpg",
 	 "miniurl": "./images/mini19.jpg",
-	 "latitude": 69.1501,
-	 "longitude": 174.38,
+	 "latitude": 73.7645,
+	 "longitude": 16.8096,
 	 "commenturl": [
-		 "./jsons/image_comment_19_1.json"
+		 "./jsons/image_comment_19_1.json",
+		 "./jsons/image_comment_19_2.json",
+		 "./jsons/image_comment_19_3.json"
 	]},
 	{"bigurl": "./images/20.jpg",
 	 "miniurl": "./images/mini20.jpg",
-	 "latitude": 19.3393,
-	 "longitude": 93.9085,
+	 "latitude": 1.46123,
+	 "longitude": 133.927,
 	 "commenturl": [
 		 "./jsons/image_comment_20_1.json"
 	]},
 	{"bigurl": "./images/21.jpg",
 	 "miniurl": "./images/mini21.jpg",
-	 "latitude": 53.5902,
-	 "longitude": 21.4624,
+	 "latitude": 78.1536,
+	 "longitude": 26.5877,
 	 "commenturl": [
 		 "./jsons/image_comment_21_1.json",
-		 "./jsons/image_comment_21_2.json",
-		 "./jsons/image_comment_21_3.json",
-		 "./jsons/image_comment_21_4.json"
+		 "./jsons/image_comment_21_2.json"
 	]},
 	{"bigurl": "./images/22.jpg",
 	 "miniurl": "./images/mini22.jpg",
-	 "latitude": 61.5226,
-	 "longitude": 3.04331,
+	 "latitude": 66.9115,
+	 "longitude": 86.3002,
 	 "commenturl": [
-		 "./jsons/image_comment_22_1.json"
+		 "./jsons/image_comment_22_1.json",
+		 "./jsons/image_comment_22_2.json",
+		 "./jsons/image_comment_22_3.json"
 	]},
 	{"bigurl": "./images/23.jpg",
 	 "miniurl": "./images/mini23.jpg",
-	 "latitude": 53.972,
-	 "longitude": 56.6637,
+	 "latitude": 46.5697,
+	 "longitude": 1.92267,
 	 "commenturl": [
 		 "./jsons/image_comment_23_1.json",
 		 "./jsons/image_comment_23_2.json"
 	]},
 	{"bigurl": "./images/24.jpg",
 	 "miniurl": "./images/mini24.jpg",
-	 "latitude": 59.696,
-	 "longitude": 121.743,
+	 "latitude": 85.8086,
+	 "longitude": 84.7896,
 	 "commenturl": [
-		 "./jsons/image_comment_24_1.json",
-		 "./jsons/image_comment_24_2.json"
+		 "./jsons/image_comment_24_1.json"
 	]},
 	{"bigurl": "./images/25.jpg",
 	 "miniurl": "./images/mini25.jpg",
-	 "latitude": 49.7751,
-	 "longitude": 113.305,
+	 "latitude": 7.15232,
+	 "longitude": 20.5231,
 	 "commenturl": [
 		 "./jsons/image_comment_25_1.json"
 	]},
 	{"bigurl": "./images/26.jpg",
 	 "miniurl": "./images/mini26.jpg",
-	 "latitude": 19.3448,
-	 "longitude": 53.159,
+	 "latitude": 23.5115,
+	 "longitude": 168.491,
 	 "commenturl": [
 		 "./jsons/image_comment_26_1.json",
 		 "./jsons/image_comment_26_2.json",
-		 "./jsons/image_comment_26_3.json",
-		 "./jsons/image_comment_26_4.json"
+		 "./jsons/image_comment_26_3.json"
 	]},
 	{"bigurl": "./images/27.jpg",
 	 "miniurl": "./images/mini27.jpg",
-	 "latitude": 13.8075,
-	 "longitude": 145.952,
+	 "latitude": 10.4428,
+	 "longitude": 145.958,
 	 "commenturl": [
 		 "./jsons/image_comment_27_1.json",
 		 "./jsons/image_comment_27_2.json",
-		 "./jsons/image_comment_27_3.json"
+		 "./jsons/image_comment_27_3.json",
+		 "./jsons/image_comment_27_4.json"
 	]},
 	{"bigurl": "./images/28.jpg",
 	 "miniurl": "./images/mini28.jpg",
-	 "latitude": 9.77538,
-	 "longitude": 100.083,
+	 "latitude": 15.7466,
+	 "longitude": 147.177,
 	 "commenturl": [
 		 "./jsons/image_comment_28_1.json",
 		 "./jsons/image_comment_28_2.json",
@@ -233,34 +246,30 @@
 	]},
 	{"bigurl": "./images/29.jpg",
 	 "miniurl": "./images/mini29.jpg",
-	 "latitude": 10.1215,
-	 "longitude": 87.9263,
+	 "latitude": 76.7199,
+	 "longitude": 104.439,
 	 "commenturl": [
-		 "./jsons/image_comment_29_1.json",
-		 "./jsons/image_comment_29_2.json",
-		 "./jsons/image_comment_29_3.json",
-		 "./jsons/image_comment_29_4.json"
+		 "./jsons/image_comment_29_1.json"
 	]},
 	{"bigurl": "./images/30.jpg",
 	 "miniurl": "./images/mini30.jpg",
-	 "latitude": 64.5494,
-	 "longitude": 102.484,
+	 "latitude": 81.8314,
+	 "longitude": 59.6246,
 	 "commenturl": [
-		 "./jsons/image_comment_30_1.json",
-		 "./jsons/image_comment_30_2.json"
+		 "./jsons/image_comment_30_1.json"
 	]},
 	{"bigurl": "./images/31.jpg",
 	 "miniurl": "./images/mini31.jpg",
-	 "latitude": 26.2746,
-	 "longitude": 150.292,
+	 "latitude": 56.0897,
+	 "longitude": 78.8183,
 	 "commenturl": [
 		 "./jsons/image_comment_31_1.json",
 		 "./jsons/image_comment_31_2.json"
 	]},
 	{"bigurl": "./images/32.jpg",
 	 "miniurl": "./images/mini32.jpg",
-	 "latitude": 45.71,
-	 "longitude": 173.49,
+	 "latitude": 58.3804,
+	 "longitude": 24.5936,
 	 "commenturl": [
 		 "./jsons/image_comment_32_1.json",
 		 "./jsons/image_comment_32_2.json",
@@ -268,58 +277,59 @@
 	]},
 	{"bigurl": "./images/33.jpg",
 	 "miniurl": "./images/mini33.jpg",
-	 "latitude": 35.3771,
-	 "longitude": 21.1658,
+	 "latitude": 1.28269,
+	 "longitude": 30.3726,
 	 "commenturl": [
 		 "./jsons/image_comment_33_1.json",
-		 "./jsons/image_comment_33_2.json"
+		 "./jsons/image_comment_33_2.json",
+		 "./jsons/image_comment_33_3.json",
+		 "./jsons/image_comment_33_4.json"
 	]},
 	{"bigurl": "./images/34.jpg",
 	 "miniurl": "./images/mini34.jpg",
-	 "latitude": 29.6585,
-	 "longitude": 164.718,
+	 "latitude": 33.4846,
+	 "longitude": 33.9543,
 	 "commenturl": [
-		 "./jsons/image_comment_34_1.json"
+		 "./jsons/image_comment_34_1.json",
+		 "./jsons/image_comment_34_2.json"
 	]},
 	{"bigurl": "./images/35.jpg",
 	 "miniurl": "./images/mini35.jpg",
-	 "latitude": 15.3264,
-	 "longitude": 72.5944,
+	 "latitude": 15.4802,
+	 "longitude": 56.4989,
 	 "commenturl": [
 		 "./jsons/image_comment_35_1.json",
-		 "./jsons/image_comment_35_2.json"
+		 "./jsons/image_comment_35_2.json",
+		 "./jsons/image_comment_35_3.json",
+		 "./jsons/image_comment_35_4.json"
 	]},
 	{"bigurl": "./images/36.jpg",
 	 "miniurl": "./images/mini36.jpg",
-	 "latitude": 14.225,
-	 "longitude": 105.225,
+	 "latitude": 66.8511,
+	 "longitude": 176.786,
 	 "commenturl": [
-		 "./jsons/image_comment_36_1.json",
-		 "./jsons/image_comment_36_2.json",
-		 "./jsons/image_comment_36_3.json"
+		 "./jsons/image_comment_36_1.json"
 	]},
 	{"bigurl": "./images/37.jpg",
 	 "miniurl": "./images/mini37.jpg",
-	 "latitude": 45.9737,
-	 "longitude": 19.3255,
+	 "latitude": 44.5152,
+	 "longitude": 104.61,
 	 "commenturl": [
 		 "./jsons/image_comment_37_1.json",
-		 "./jsons/image_comment_37_2.json",
-		 "./jsons/image_comment_37_3.json",
-		 "./jsons/image_comment_37_4.json"
+		 "./jsons/image_comment_37_2.json"
 	]},
 	{"bigurl": "./images/38.jpg",
 	 "miniurl": "./images/mini38.jpg",
-	 "latitude": 87.7203,
-	 "longitude": 55.9825,
+	 "latitude": 42.2877,
+	 "longitude": 125.671,
 	 "commenturl": [
 		 "./jsons/image_comment_38_1.json",
 		 "./jsons/image_comment_38_2.json"
 	]},
 	{"bigurl": "./images/39.jpg",
 	 "miniurl": "./images/mini39.jpg",
-	 "latitude": 40.0079,
-	 "longitude": 33.2566,
+	 "latitude": 49.9564,
+	 "longitude": 59.7235,
 	 "commenturl": [
 		 "./jsons/image_comment_39_1.json",
 		 "./jsons/image_comment_39_2.json",
@@ -327,42 +337,39 @@
 	]},
 	{"bigurl": "./images/40.jpg",
 	 "miniurl": "./images/mini40.jpg",
-	 "latitude": 38.0139,
-	 "longitude": 61.4814,
+	 "latitude": 14.2277,
+	 "longitude": 177.369,
 	 "commenturl": [
 		 "./jsons/image_comment_40_1.json",
-		 "./jsons/image_comment_40_2.json",
-		 "./jsons/image_comment_40_3.json",
-		 "./jsons/image_comment_40_4.json"
+		 "./jsons/image_comment_40_2.json"
 	]},
 	{"bigurl": "./images/41.jpg",
 	 "miniurl": "./images/mini41.jpg",
-	 "latitude": 20.556,
-	 "longitude": 67.4306,
+	 "latitude": 60.4459,
+	 "longitude": 29.9167,
 	 "commenturl": [
-		 "./jsons/image_comment_41_1.json"
+		 "./jsons/image_comment_41_1.json",
+		 "./jsons/image_comment_41_2.json",
+		 "./jsons/image_comment_41_3.json"
 	]},
 	{"bigurl": "./images/42.jpg",
 	 "miniurl": "./images/mini42.jpg",
-	 "latitude": 12.566,
-	 "longitude": 165.772,
+	 "latitude": 38.5632,
+	 "longitude": 23.3412,
 	 "commenturl": [
-		 "./jsons/image_comment_42_1.json",
-		 "./jsons/image_comment_42_2.json",
-		 "./jsons/image_comment_42_3.json"
+		 "./jsons/image_comment_42_1.json"
 	]},
 	{"bigurl": "./images/43.jpg",
 	 "miniurl": "./images/mini43.jpg",
-	 "latitude": 51.522,
-	 "longitude": 107.587,
+	 "latitude": 53.354,
+	 "longitude": 166.448,
 	 "commenturl": [
-		 "./jsons/image_comment_43_1.json",
-		 "./jsons/image_comment_43_2.json"
+		 "./jsons/image_comment_43_1.json"
 	]},
 	{"bigurl": "./images/44.jpg",
 	 "miniurl": "./images/mini44.jpg",
-	 "latitude": 36.624,
-	 "longitude": 11.1789,
+	 "latitude": 18.2626,
+	 "longitude": 22.7589,
 	 "commenturl": [
 		 "./jsons/image_comment_44_1.json",
 		 "./jsons/image_comment_44_2.json",
@@ -370,54 +377,54 @@
 	]},
 	{"bigurl": "./images/45.jpg",
 	 "miniurl": "./images/mini45.jpg",
-	 "latitude": 20.1962,
-	 "longitude": 114.014,
+	 "latitude": 34.0971,
+	 "longitude": 16.7217,
 	 "commenturl": [
 		 "./jsons/image_comment_45_1.json",
-		 "./jsons/image_comment_45_2.json"
+		 "./jsons/image_comment_45_2.json",
+		 "./jsons/image_comment_45_3.json"
 	]},
 	{"bigurl": "./images/46.jpg",
 	 "miniurl": "./images/mini46.jpg",
-	 "latitude": 47.0833,
-	 "longitude": 44.8256,
+	 "latitude": 41.579,
+	 "longitude": 153.187,
 	 "commenturl": [
 		 "./jsons/image_comment_46_1.json",
 		 "./jsons/image_comment_46_2.json",
-		 "./jsons/image_comment_46_3.json",
-		 "./jsons/image_comment_46_4.json"
+		 "./jsons/image_comment_46_3.json"
 	]},
 	{"bigurl": "./images/47.jpg",
 	 "miniurl": "./images/mini47.jpg",
-	 "latitude": 31.5922,
-	 "longitude": 23.4181,
+	 "latitude": 45.081,
+	 "longitude": 19.5178,
 	 "commenturl": [
 		 "./jsons/image_comment_47_1.json",
 		 "./jsons/image_comment_47_2.json",
-		 "./jsons/image_comment_47_3.json"
+		 "./jsons/image_comment_47_3.json",
+		 "./jsons/image_comment_47_4.json"
 	]},
 	{"bigurl": "./images/48.jpg",
 	 "miniurl": "./images/mini48.jpg",
-	 "latitude": 58.938,
-	 "longitude": 90.0082,
+	 "latitude": 64.629,
+	 "longitude": 77.6043,
 	 "commenturl": [
 		 "./jsons/image_comment_48_1.json"
 	]},
 	{"bigurl": "./images/49.jpg",
 	 "miniurl": "./images/mini49.jpg",
-	 "latitude": 57.0565,
-	 "longitude": 123.375,
+	 "latitude": 36.4263,
+	 "longitude": 166.53,
 	 "commenturl": [
-		 "./jsons/image_comment_49_1.json",
-		 "./jsons/image_comment_49_2.json",
-		 "./jsons/image_comment_49_3.json",
-		 "./jsons/image_comment_49_4.json"
+		 "./jsons/image_comment_49_1.json"
 	]},
 	{"bigurl": "./images/50.jpg",
 	 "miniurl": "./images/mini50.jpg",
-	 "latitude": 14.2112,
-	 "longitude": 75.9178,
+	 "latitude": 57.0318,
+	 "longitude": 119.227,
 	 "commenturl": [
 		 "./jsons/image_comment_50_1.json",
-		 "./jsons/image_comment_50_2.json"
+		 "./jsons/image_comment_50_2.json",
+		 "./jsons/image_comment_50_3.json",
+		 "./jsons/image_comment_50_4.json"
 	]}
 ]
