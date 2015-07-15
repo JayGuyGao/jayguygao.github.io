@@ -178,7 +178,7 @@ function adjustPictureView(){
 	node.style.height = document.getElementById("picture-view-container").clientHeight + "px";
 	var marginHeight = document.getElementById("picture-view-container").clientHeight / 50;
 	var buttonHeight = marginHeight * 2;
-	var eachHeight = (document.getElementById("picture-view-container").clientHeight - 4 - marginHeight * 5 - buttonHeight) / 5;
+	var eachHeight = (document.getElementById("picture-view-container").clientHeight - 2*6 - marginHeight * 10 - buttonHeight) / 5;
 	
 	node = document.getElementsByClassName("comment-item");
 	for (var i = 0; i < node.length; i ++){
