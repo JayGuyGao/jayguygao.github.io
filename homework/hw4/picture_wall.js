@@ -101,7 +101,27 @@ function clickPicture(evt) {
 		comment.setAttribute("class", "comment-item");
 		commentlist.appendChild(comment);
 	}
-				
+	
+	//创建“上一页”“下一页”按钮
+	var prevButton = document.createElement('div');
+	var nextButton = document.createElement('div');
+	prevButton.setAttribute("class", "comment-button");
+	prevButton.setAttribute("style", "display: inline; height: 15%; width: 40%; margin: 2px; background: white; border: solid white 10px; -webkit-box-shadow:0 0 10px rgba(0, 0, 0, .5); -moz-box-shadow:0 0 10px rgba(0, 0, 0, .5); box-shadow:0 0 10px rgba(0, 0, 0, .5); border-radius: 4px;");
+	nextButton.setAttribute("class", "comment-button");
+	nextButton.setAttribute("style", "display: inline; height: 15%; width: 40%; margin: 2px; background: white; border: solid white 10px; -webkit-box-shadow:0 0 10px rgba(0, 0, 0, .5); -moz-box-shadow:0 0 10px rgba(0, 0, 0, .5); box-shadow:0 0 10px rgba(0, 0, 0, .5); border-radius: 4px;");
+	
+	var pNode = document.createElement("p");
+	var txtNode = document.createTextNode("上一页");
+	pNode.appendChild(txtNode);
+	prevButton.appendChild(pNode);
+	
+	var pNode = document.createElement("p");
+	var txtNode = document.createTextNode("下一页");
+	pNode.appendChild(txtNode);
+	nextButton.appendChild(pNode);
+	
+	commentlist.appendChild(prevButton);
+	commentlist.appendChild(nextButton);
 	
 	var ajax = new XMLHttpRequest();
 	ajax.open("GET", imageInfo[picIndex].commenturl[commentPage], true);
@@ -157,11 +177,16 @@ function adjustPictureView(){
 	//node.setAttribute("style", "height: "document.getElementById("picture-view-container").clientHeight" width: 300px; float:left;");
 	node.style.height = document.getElementById("picture-view-container").clientHeight + "px";
 	var marginHeight = document.getElementById("picture-view-container").clientHeight / 50;
-	var eachHeight = (document.getElementById("picture-view-container").clientHeight - 2 - marginHeight * 5) / 5;
+	var buttonHeight = marginHeight * 4;
+	var eachHeight = (document.getElementById("picture-view-container").clientHeight - 2 - marginHeight * 5 - buttonHeight) / 5;
 	
 	node = document.getElementsByClassName("comment-item");
 	for (var i = 0; i < node.length; i ++){
 		node[i].setAttribute("style", "height: " + eachHeight + "px; width: 80%; margin-bottom: " + marginHeight + "px; margin-left: " + marginHeight + "px; background: white; border: solid white 1px; -webkit-box-shadow:0 0 10px rgba(0, 0, 0, .5); -moz-box-shadow:0 0 10px rgba(0, 0, 0, .5); box-shadow:0 0 10px rgba(0, 0, 0, .5);");
+	}
+	node = document.getElementsByClassName("comment-button");
+	for (var i = 0; i < node.length; i ++){
+		node[i].setAttribute("style", "display: inline; height: " + buttonHeight + "px; width: 40%; margin: 2px; background: white; border: solid white 10px; -webkit-box-shadow:0 0 10px rgba(0, 0, 0, .5); -moz-box-shadow:0 0 10px rgba(0, 0, 0, .5); box-shadow:0 0 10px rgba(0, 0, 0, .5); border-radius: 4px;");
 	}
 }
 
