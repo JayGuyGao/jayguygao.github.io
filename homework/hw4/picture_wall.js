@@ -152,7 +152,7 @@ function clickPicture(evt) {
 	evt.stopPropagation();
 }
 
-function adjustPIctureView(){
+function adjustPictureView(){
 	var node = document.getElementById("comment-list");
 	//node.setAttribute("style", "height: "document.getElementById("picture-view-container").clientHeight" width: 300px; float:left;");
 	node.style.height = document.getElementById("picture-view-container").clientHeight + "px";
