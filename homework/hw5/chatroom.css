@@ -1,0 +1,70 @@
+
+.container{
+	height: auto;
+	width: 488px;
+	padding: 0px;
+	border: 3px black solid;
+}
+
+.container > header{
+	height: 100px;
+	width: auto;
+	margin: 0px;
+	border: 2px black solid;
+}
+
+.messages{
+	float: left;
+	overflow-y:auto; 
+	overflow-x:auto;
+	height: 300px;
+	width: 300px;
+	margin: 0px;
+	border: 2px black solid;
+}
+
+.userList{
+	float: left;
+	overflow-y:auto; 
+	overflow-x:auto;
+	height: 300px;
+	width: 100px;
+	margin: 0px;
+	border: 2px black solid;
+}
+
+.container > footer{
+	clear: both;
+	height: 40px;
+	width: auto;
+	padding: 0px;
+	border: 2px black solid;
+}
+
+#background{
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	height: 100%;
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+	background: #000000;
+	filter: Alpha(opacity = 70);
+	opacity: 0.7;
+	z-index: 500;
+}
+
+#loginBox{
+	position: fixed;
+	height: 60px;
+	width: 200px;
+	padding: 10px;
+	background: #CCCCCC;
+	z-index: 501;
+	border: 2px solid white;
+}
+
+#loginButton{
+	margin-left: 150px;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+	<title>JayGuy's Chatroom</title>
+	<script src="https://cdn.firebase.com/js/client/2.2.1/firebase.js"></script>
+	<script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script src="./jquery.pubsub.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="chatroom.css">
+	<meta charset = "utf-8"></meta>
+</head>
+<body>
+
+<!-- CHAT MARKUP -->
+<div class="container" id = "chatRoom">
+	<header>
+		<p>JayGuy's Chatroom</p>
+		<input type = "button" id = "enterRoom1" class = "enterRoom" value = "一号房间" onclick = enterRoom(1) />
+		<input type = "button" id = "enterRoom2" class = "enterRoom" value = "二号房间" onclick = enterRoom(2) />
+	</header>
+
+	<ul id = 'example-messages' class="messages"></ul>
+	<ul id = "userList" class = "userList"></ul>
+
+	<footer>
+		<input type='text' id='messageInput' placeholder='Type a message...'>
+	</footer>
+</div>
+
+<!-- LOGIN BOX -->
+<div id = "background">
+</div>
+<div id = "loginBox">
+	<label for = "nameInput">Username:</label>
+	<input type = 'text' id = 'nameInput' placeholder = '请输入用户名' />
+	<input type = "button" id = "loginButton" value = "确定" />
+</div>
+
+<!-- CHAT JAVACRIPT -->
+<script src = "./chatroom.js"></script>
+</body>
+</html>
