@@ -1,3 +1,4 @@
+<!-- Author: 高贤达 张永锋 -->
 <!doctype html>
 <html>
 	<head>
@@ -7,9 +8,9 @@
 		<script src='./jquery.pubsub.min.js'></script>
 		<script src='./game_board.js'></script>
         <script src='./draw.js'></script>
+		
 	</head>
 <style>
-
 #demoCanvas{
 	position:absolute;
 	border:2px solid #FF0000;
@@ -53,11 +54,19 @@
 	-webkit-border-radius: 10px;
 	border-radius:10px;
 }
+#gameguide{
+	position:relative;
+	color:rgba(21,158,0,1.00);
+	left:200px;
+	top:500px;
+}
 </style>
 	<body>
+	<embed src="Cyanic.mp3" autostart="true" loop="true" hidden="true"></embed> 
         <div id="background"></div>
 		<canvas id="demoCanvas" width="1000" height="400"></canvas>
         <div id="gameover"><div style="margin-top:10px">game over</div><div id="showscore"></div><img id="restart" src="start.png" style="margin-top:10px"/></div>
+        
         <script>
 			gameBoard.start();
 			drawCanvas();

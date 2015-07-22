@@ -1,3 +1,4 @@
+//Author: 张永锋
 //画小球
 function drawBall(x,y,r){
 	var canvas = document.getElementById("demoCanvas");
@@ -145,6 +146,7 @@ function drawLine(x,y,cx,cy,cl){
 }
 //显示分数
 function showInfo(x,y,score){
+	//console.log("show: " + x + " " + y);
 	var canvas = document.getElementById("demoCanvas");
 	if (canvas==null) return false;
 	var context = canvas.getContext("2d");
@@ -156,10 +158,13 @@ function showInfo(x,y,score){
 	context.fillText(score,x+100,y+1);
 	context.font = "10px 微软雅黑";
 	context.fillText("author:  高贤达 张永锋",x,y+355);
+	//context.moveTo(0,0);
+	context.fillText("press space to play",10,20);
+
 }
 
 function drawDiv(){
-	$("#gameover").css("top",$("#demoCanvas")[0].offsetTop-8);
+	$("#gameover").css("top",$("#demoCanvas")[0].offsetTop-24);
 	var left = 0.5*$("#demoCanvas")[0].offsetWidth+($("#demoCanvas")[0].offsetLeft-8)-0.5*$("#gameover")[0].offsetWidth;
 	$("#gameover").css("left",left);
 	$("#showscore").html("最高得分："+gameBoard.highScore+"<br>您的得分："+gameBoard.score);
@@ -177,4 +182,14 @@ $(function(){
 		$("#gameover").slideUp();
 		gameBoard.start();
 	});
-})
+});
+
+function gamestart(){
+	$("#demoCanvas")[0].style.opacity=0.1;
+	var canvas = document.getElementById("demoCanvas");
+	if (canvas==null) return false;
+	var context = canvas.getContext("2d");
+	context.font = "60px Comic Sans MS";
+	context.fillStyle = "black";
+	context.fillText("press space to start",200,200);
+}

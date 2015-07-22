@@ -1,3 +1,4 @@
+//Author: 高贤达
 var gameBoard = { //游戏逻辑对象
 
 	//------------------------常量部分------------------------
@@ -127,20 +128,20 @@ var gameBoard = { //游戏逻辑对象
 		
 		
 		
-		this.target = this.target.filter(function(ele, pos){ return (ele.x + ele.r2 > 0); });
+		//this.target = this.target.filter(function(ele, pos){ return (ele.x + ele.r2 > 0); });
 		for (var i = 0; i < this.target.length; i ++){
 			if (this.target[i].x + this.target[i].r2 > 0 && this.target[i].x - this.target[i].r2 < this.width){
 				
 				//处理Target阴影内流动线条动画
 				//this.target[i].animLine = this.target[i].animLine.filter(function (ele, pos) { return (ele.dt < this.height + this.width); });
-				if (this.target[i].x + this.target[i].r2 > this.ball.x && this.target[i].x - this.target[i].r2 < this.ball.x){
-					this.currentTarget = i;
-				}
+				//if (this.target[i].x + this.target[i].r2 > this.ball.x && this.target[i].x - this.target[i].r2 < this.ball.x){
+				//	this.currentTarget = i;
+				//}
 				for (var j = 0; j < this.target[i].animLine.length; j ++){
 					this.target[i].animLine[j].dt += this.target[i].animLine[j].moveSpeed * (currentTime - this.lastCallTime);
 				}
 				if (Math.random() < 0.04){
-					console.log("new line");
+					//console.log("new line");
 					var tmpdr = this.randomSign() * Math.random() * this.target[i].r2;
 					var tmpdt = Math.sqrt(this.target[i].r2 * this.target[i].r2 + tmpdr * tmpdr) + 1;
 					var tmpdl = Math.random() * this.R;
@@ -367,7 +368,7 @@ var gameBoard = { //游戏逻辑对象
 			if (it == 2){
 				this.perfect ++;
 				this.score += this.perfect;
-				console.log("Perfect!" + this.perfect);
+				//console.log("Perfect!" + this.perfect);
 				$.publish("perfect");
 			}
 			return true;
