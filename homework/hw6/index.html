@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Slipping Ball</title>
+		<meta charset="utf-8">
+		<script src="./jquery-1.11.3.min.js"></script>
+		<script src='./jquery.pubsub.min.js'></script>
+		<script src='./game_board.js'></script>
+        <script src='./draw.js'></script>
+	</head>
+<style>
+
+#demoCanvas{
+	position:absolute;
+	border:2px solid #FF0000;
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+	margin:auto;
+	background:#FAFAFA;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius:10px;
+}
+#background{
+	position:absolute;
+	width:1015px;
+	height:415px;
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+	margin:auto;
+	background:rgba(250,0,0,0.50);
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius:10px;
+}
+#gameover{
+	position:relative;
+	display:none;
+	width:600px;
+	height:400px;
+	text-align:center;
+	font-family:"Segoe Script";
+	font-size:60px;
+	font-weight:bold;
+	color:rgba(221,1,7,1.00);
+	background:#FFDADA;
+	border:2px solid #FCA8FF;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius:10px;
+}
+</style>
+	<body>
+        <div id="background"></div>
+		<canvas id="demoCanvas" width="1000" height="400"></canvas>
+        <div id="gameover"><div style="margin-top:10px">game over</div><div id="showscore"></div><img id="restart" src="start.png" style="margin-top:10px"/></div>
+        <script>
+			gameBoard.start();
+			drawCanvas();
+			
+			function drawCanvas(){
+				var canvas = document.getElementById("demoCanvas");
+				if (canvas==null) return false;
+				var context = canvas.getContext("2d");
+				context.clearRect(0, 0, 1000, 400);
+				
+				for (var i = 0; i < gameBoard.target.length; i ++){
+					if (gameBoard.target[i].x + gameBoard.target[i].r2 > 0 && gameBoard.target[i].x - gameBoard.target[i].r2 < gameBoard.width){
+						drawTarget(gameBoard.target[i].x, gameBoard.target[i].y, gameBoard.target[i].r1, gameBoard.target[i].r2, gameBoard.target[i].f1, gameBoard.target[i].f2, gameBoard.target[i].enterAngle, gameBoard.target[i].spreadAngle);
+						for (var j = 0; j < gameBoard.target[i].animLine.length; j ++){
+							if (gameBoard.target[i].animLine[j].dt < gameBoard.height + gameBoard.width){
+								drawLine(gameBoard.target[i].x, gameBoard.target[i].y, gameBoard.target[i].animLine[j].dt, gameBoard.target[i].animLine[j].dr, gameBoard.target[i].animLine[j].dl);
+							}
+						}
+					}
+				}
+				
+				for (var i = 0; i < gameBoard.trace.length; i ++)
+					if (gameBoard.trace[i].r > 0){
+						drawBall(gameBoard.trace[i].x, gameBoard.trace[i].y, gameBoard.trace[i].r);
+					}
+				
+				if (gameBoard.status <= 2) drawArrow(gameBoard.ball.x, gameBoard.ball.y, gameBoard.ball.r, gameBoard.currentAngle, gameBoard.currentForce / gameBoard.maxForce);
+				setTimeout("drawCanvas()", 1000 / 50);
+				drawBall(gameBoard.ball.x, gameBoard.ball.y, gameBoard.ball.r);
+				showInfo(840,30,gameBoard.score);
+			}
+			
+			window.onkeypress = function (e) {
+				if (e.keyCode == 32) {
+					gameBoard.clientCall();
+				}
+			};
+			
+			$.subscribe("gameover", gameover);
+		</script>
+	</body>
+</html>
