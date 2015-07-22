@@ -4,10 +4,10 @@
 	<head>
 		<title>Slipping Ball</title>
 		<meta charset="utf-8">
-		<script src="./jquery-1.11.3.min.js"></script>
-		<script src='./jquery.pubsub.min.js'></script>
-		<script src='./game_board.js'></script>
-        <script src='./draw.js'></script>
+		<script src="./js/jquery-1.11.3.min.js"></script>
+		<script src='./js/jquery.pubsub.min.js'></script>
+		<script src='./js/game_board.js'></script>
+        <script src='./js/draw.js'></script>
 		
 	</head>
 <style>
@@ -62,10 +62,10 @@
 }
 </style>
 	<body>
-	<embed src="Cyanic.mp3" autostart="true" loop="true" hidden="true"></embed> 
+	<embed src="./mp3/Cyanic.mp3" autostart="true" loop="true" hidden="true"></embed> 
         <div id="background"></div>
 		<canvas id="demoCanvas" width="1000" height="400"></canvas>
-        <div id="gameover"><div style="margin-top:10px">game over</div><div id="showscore"></div><img id="restart" src="start.png" style="margin-top:10px"/></div>
+        <div id="gameover"><div style="margin-top:10px">game over</div><div id="showscore"></div><img id="restart" src="./img/start.png" style="margin-top:10px"/></div>
         
         <script>
 			gameBoard.start();
