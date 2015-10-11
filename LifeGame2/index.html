@@ -1,0 +1,35 @@
+<html>
+	<head>
+		<title>Game of Life 2</title>
+		<meta http-equiv = "Content-Type" content = "text/html; charset=UTF-8">
+		<link href="https://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script type="text/javascript" src = "ui.js"></script>
+		<script type="text/javascript" src = "timer.js"></script>
+		<script type="text/javascript" src = "game_board.js"></script>
+		<script src="https://code.jquery.com/jquery.js"></script>
+		<script src="https://cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	</head>
+	<body style = 'text-align: center'>
+		<button type = 'button' class = 'btn btn-success' onclick = 'changeResolution(500, 500)'>500X500</button>
+		<button type = 'button' class = 'btn btn-success' onclick = 'changeResolution(250, 250)'>250X250</button>
+		<button type = 'button' class = 'btn btn-success' onclick = 'changeResolution(100, 100)'>100X100</button>
+		<button type = 'button' class = 'btn btn-success' onclick = 'changeResolution(50, 50)'>50X50</button>
+		<button type = 'button' class = 'btn btn-success' onclick = 'changeResolution(10, 10)'>10X10</button>
+		<button type = 'button' class = 'btn btn-success' onclick = 'changeResolution(5, 5)'>5X5</button>
+		<button type = 'button' class = 'btn btn-primary' onclick = 'run();'>开始</button>
+		<button type = 'button' class = 'btn btn-primary' onclick = 'timer.stop();'>暂停</button>
+		<div class="form-inline">
+	         <label>初始细胞密度（0~1）</label>
+	         <input id = "proportion" type="text" class="input-small" value = 0.4>
+	         <label>地图刷新帧率（fps）</label>
+	         <input id = "fps" type="text" class="input-small" value = 10>
+	         <span class="help-block">更改后请重新“选择地图大小”并按“开始”</span>
+      	</div>
+		<canvas id="canvas" width="1000" height="1000">
+			Canvas not supported.
+		</canvas>
+	</body>
+
+	<script type="text/javascript" src = "main.js"></script>
+</html>
